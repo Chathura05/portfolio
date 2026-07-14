@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chathura05.github.io"),
   title: "Chathura Weerasinghe | Software Engineering Undergraduate",
   description:
     "Portfolio of Chathura Weerasinghe — Full-Stack Developer & Automation Testing specialist. Passionate Software Engineering undergraduate building beautiful, performant web applications.",
@@ -17,16 +18,30 @@ export const metadata: Metadata = {
     "Sri Lanka",
   ],
   authors: [{ name: "Chathura Weerasinghe" }],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Chathura Weerasinghe | Portfolio",
     description: "Full-Stack Developer & Automation Testing specialist.",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Chathura Weerasinghe — Software Engineering Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Chathura Weerasinghe | Portfolio",
     description: "Full-Stack Developer & Automation Testing specialist.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,

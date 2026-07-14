@@ -81,7 +81,7 @@ export const skills: Skill[] = [
   { name: "Java",         level: 88, category: "backend",  icon: "FaJava" },
   // Tools
   { name: "Git / GitHub", level: 92, category: "tools",    icon: "FaGitAlt" },
-  { name: "VS Code",      level: 95, category: "tools",    icon: "SiVisualstudiocode" },
+  { name: "VS Code",      level: 95, category: "tools",    icon: "TbBrandVscode" },
   { name: "Postman",      level: 85, category: "tools",    icon: "SiPostman" },
   { name: "Figma",        level: 70, category: "tools",    icon: "FaFigma" },
 ];

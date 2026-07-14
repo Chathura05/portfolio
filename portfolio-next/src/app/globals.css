@@ -310,3 +310,22 @@ body {
   @apply bg-white/95 dark:bg-[#04060e]/95;
   border-bottom: 1px solid rgba(0, 245, 255, 0.2); backdrop-filter: blur(20px);
 }
+
+/* ═══════════════════════════════════════════════════════
+   SCROLL PROGRESS BAR
+═══════════════════════════════════════════════════════ */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 9999;
+  background: linear-gradient(90deg, #00f5ff, #ff003c, #bf00ff);
+  box-shadow:
+    0 0 6px #00f5ff,
+    0 0 12px rgba(0, 245, 255, 0.5),
+    0 0 2px #ff003c;
+  transform-origin: 0%;
+  pointer-events: none;
+}

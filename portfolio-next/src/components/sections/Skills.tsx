@@ -6,14 +6,15 @@ import {
   FaHtml5, FaJs, FaReact, FaPhp, FaJava, FaGitAlt, FaFigma, FaLaravel, FaNodeJs
 } from "react-icons/fa";
 import {
-  SiTailwindcss, SiMysql, SiPostgresql, SiVsco, SiTypescript, SiPostman
+  SiTailwindcss, SiMysql, SiPostgresql, SiTypescript, SiPostman
 } from "react-icons/si";
+import { TbBrandVscode } from "react-icons/tb";
 import { skills, type Skill } from "@/data/portfolio";
 import { staggerContainer, fadeUp } from "@/components/ui/SectionWrapper";
 
 const iconMap: Record<string, React.ElementType> = {
   FaHtml5, FaJs, FaReact, FaPhp, FaJava, FaGitAlt, FaFigma, FaLaravel, FaNodeJs,
-  SiTailwindcss, SiMysql, SiPostgresql, SiVisualstudiocode: SiVsco, SiTypescript, SiPostman,
+  SiTailwindcss, SiMysql, SiPostgresql, TbBrandVscode, SiTypescript, SiPostman,
 };
 
 const categoryColors: Record<Skill["category"], { fill: string; glow: string }> = {
