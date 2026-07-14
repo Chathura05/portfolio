@@ -62,7 +62,10 @@ export const personal = {
   whatsapp: "https://wa.me/94756537127?text=Hi%20Chathura,%20I%20saw%20your%20portfolio",
   cv:       "/Chathura_Weerasinghe_CV.pdf",
   photo:    "/Profile.jpg",
+  // ↓ Paste your Formspree endpoint here after signing up at formspree.io
+  formspreeEndpoint: "https://formspree.io/f/xaqrnwbj",
 };
+
 
 // ── Skills ────────────────────────────────────────────────
 export const skills: Skill[] = [

@@ -140,8 +140,38 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [sent,    setSent]    = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const [error,   setError]   = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError("");
+
+    // ── Formspree (recommended) ──────────────────────────
+    if (personal.formspreeEndpoint) {
+      setSending(true);
+      try {
+        const res = await fetch(personal.formspreeEndpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ name, email, message }),
+        });
+        if (res.ok) {
+          setSent(true);
+          setTimeout(() => setSent(false), 5000);
+          setName(""); setEmail(""); setMessage("");
+        } else {
+          setError("Failed to send. Please try emailing directly.");
+        }
+      } catch {
+        setError("Network error. Please try again.");
+      } finally {
+        setSending(false);
+      }
+      return;
+    }
+
+    // ── Fallback: mailto ─────────────────────────────────
     const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
     const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
     window.open(`mailto:${personal.email}?subject=${subject}&body=${body}`, "_blank");
@@ -149,6 +179,7 @@ export default function Contact() {
     setTimeout(() => setSent(false), 4000);
     setName(""); setEmail(""); setMessage("");
   };
+
 
   return (
     <section id="contact" ref={ref} className="relative py-24 md:py-32 cyber-dark overflow-hidden">
@@ -243,13 +274,30 @@ export default function Contact() {
 
                   <motion.button
                     type="submit"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
+                    disabled={sending}
+                    whileHover={sending ? {} : { scale: 1.03 }}
+                    whileTap={sending ? {} : { scale: 0.97 }}
                     className="btn-cyber w-full flex items-center justify-center gap-2"
+                    style={sending ? { opacity: 0.7, cursor: "not-allowed" } : {}}
                   >
-                    <FiSend size={15} />
-                    Send Message
+                    {sending ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <FiSend size={15} />
+                        Send Message
+                      </>
+                    )}
                   </motion.button>
+
+                  {error && (
+                    <p className="font-mono text-xs text-center mt-2" style={{ color: "#ff003c" }}>
+                      ⚠ {error}
+                    </p>
+                  )}
                 </form>
               )}
             </div>
