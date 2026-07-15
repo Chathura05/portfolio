@@ -91,22 +91,23 @@ export default function About() {
                   style={{ background: "linear-gradient(to top, rgba(6,9,15,0.6), transparent)" }}
                 />
               </div>
+            </div>
 
-              {/* Label badge */}
-              <div className="absolute bottom-3 right-4 z-20">
-                <span
-                  className="font-mono text-xs uppercase tracking-widest px-3 py-1"
-                  style={{
-                    background: "rgba(4,6,14,0.8)",
-                    border: "1px solid rgba(0,245,255,0.3)",
-                    color: "#00f5ff",
-                    backdropFilter: "blur(8px)",
-                    clipPath: "polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)",
-                  }}
-                >
-                  // profile.banner
-                </span>
-              </div>
+            {/* Label badge (moved outside overflow-hidden) */}
+            <div className="absolute -top-3 right-8 z-30">
+              <span
+                className="font-mono text-xs uppercase tracking-widest px-3 py-1 inline-block"
+                style={{
+                  background: "rgba(4,6,14,0.95)",
+                  border: "1px solid rgba(0,245,255,0.4)",
+                  color: "#00f5ff",
+                  backdropFilter: "blur(8px)",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.5)",
+                  clipPath: "polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)",
+                }}
+              >
+                // profile.banner
+              </span>
             </div>
           </motion.div>
 

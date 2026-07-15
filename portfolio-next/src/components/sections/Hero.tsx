@@ -230,38 +230,32 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4 pt-2">
-            <motion.a
+            <a
               href="#projects"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="btn-cyber flex items-center gap-2 relative z-10 cursor-pointer"
+              className="btn-cyber flex items-center gap-2 relative z-10 cursor-pointer hover:scale-105 active:scale-95 transition-transform"
             >
               <FiCode size={16} />
               View Projects
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="btn-cyber btn-cyber-pink flex items-center gap-2 relative z-10 cursor-pointer"
+              className="btn-cyber btn-cyber-pink flex items-center gap-2 relative z-10 cursor-pointer hover:scale-105 active:scale-95 transition-transform"
             >
               <FiMail size={16} />
               Contact Me
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href={personal.cv}
               download
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="flex items-center gap-2 px-6 py-3 font-mono text-sm font-semibold uppercase tracking-widest transition-all"
+              className="flex items-center gap-2 px-6 py-3 font-mono text-sm font-semibold uppercase tracking-widest hover:scale-105 active:scale-95 transition-transform"
               style={{
                 color: "#00f5ff",
                 border: "1px solid rgba(0,245,255,0.3)",
@@ -270,7 +264,7 @@ export default function Hero() {
             >
               <FiDownload size={16} />
               Download CV
-            </motion.a>
+            </a>
           </motion.div>
 
           {/* Stat row */}

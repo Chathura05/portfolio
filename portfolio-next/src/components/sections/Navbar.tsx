@@ -157,12 +157,14 @@ export default function Navbar() {
                     e.preventDefault();
                     setMobileOpen(false);
                     const targetId = href.replace('#', '');
-                    const elem = document.getElementById(targetId);
-                    if (elem) {
-                      elem.scrollIntoView({ behavior: 'smooth' });
-                    } else {
-                      window.location.href = href;
-                    }
+                    setTimeout(() => {
+                      const elem = document.getElementById(targetId);
+                      if (elem) {
+                        elem.scrollIntoView({ behavior: 'smooth' });
+                      } else {
+                        window.location.href = href;
+                      }
+                    }, 150);
                   }}
                   className="py-3 px-4 font-mono text-sm transition-all flex items-center gap-3"
                   style={{
