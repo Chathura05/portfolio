@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "next-themes";
+import { FiMenu, FiX, FiDownload } from "react-icons/fi";
 import Image from "next/image";
-import { FiSun, FiMoon, FiMenu, FiX, FiDownload, FiTerminal } from "react-icons/fi";
 import { personal } from "@/data/portfolio";
 
 const links = [
@@ -19,10 +18,6 @@ export default function Navbar() {
   const [scrolled,   setScrolled]   = useState(false);
   const [active,     setActive]     = useState("#home");
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mounted,    setMounted]    = useState(false);
-  const { theme, setTheme }         = useTheme();
-
-  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);

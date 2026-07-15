@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { projects, type Project } from "@/data/portfolio";
-import { staggerContainer, fadeUp, scaleIn } from "@/components/ui/SectionWrapper";
+import { staggerContainer, scaleIn } from "@/components/ui/SectionWrapper";
 
 const iconMap: Record<string, React.ElementType> = {
   FaBuilding, FaHospital, FaBreadSlice, FaCashRegister,

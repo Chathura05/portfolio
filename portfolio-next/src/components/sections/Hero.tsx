@@ -107,8 +107,10 @@ function Typewriter({ texts }: { texts: string[] }) {
           setCharIdx((c) => c - 1);
         }, 40);
       } else {
-        setIdx((i) => (i + 1) % texts.length);
-        setTyping(true);
+        timeout = setTimeout(() => {
+          setIdx((i) => (i + 1) % texts.length);
+          setTyping(true);
+        }, 0);
       }
     }
     return () => clearTimeout(timeout);

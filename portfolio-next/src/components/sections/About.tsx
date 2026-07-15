@@ -106,7 +106,7 @@ export default function About() {
                   clipPath: "polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%)",
                 }}
               >
-                // profile.banner
+                {"// profile.banner"}
               </span>
             </div>
           </motion.div>

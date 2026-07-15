@@ -68,7 +68,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Chathura Weerasinghe
             </p>
             <p className="font-mono text-xs mt-0.5" style={{ color: "rgba(0,245,255,0.3)" }}>
-              // All rights reserved
+              {"// All rights reserved"}
             </p>
           </div>
         </div>

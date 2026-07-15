@@ -210,7 +210,7 @@ export default function Contact() {
           className="text-center max-w-xl mx-auto mb-14 leading-relaxed text-sm md:text-base text-slate-600 dark:text-slate-300"
           style={{ fontFamily: "'Fira Code', monospace" }}
         >
-          // Looking for internship opportunities. Open to collaboration, projects, or just a tech chat.
+          {"// Looking for internship opportunities. Open to collaboration, projects, or just a tech chat."}
         </motion.p>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -240,7 +240,7 @@ export default function Contact() {
                 >
                   <FiCheckCircle size={48} style={{ color: "#39ff14", filter: "drop-shadow(0 0 12px #39ff14)" }} />
                   <p className="font-mono text-sm text-center" style={{ color: "#39ff14" }}>
-                    // Message composed. Opening mail client...
+                    {"// Message composed. Opening mail client..."}
                   </p>
                 </motion.div>
               ) : (

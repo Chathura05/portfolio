@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaGithub, FaStar, FaCodeBranch, FaUsers, FaBook,
-  FaFire, FaEye,
 } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { VscRepo } from "react-icons/vsc";
@@ -139,7 +138,7 @@ export default function GitHubStats() {
         setStars(totalStars);
         setForks(totalForks);
         setLangs(topLangs);
-      } catch (_) {
+      } catch {
         // silently fail — no API token needed for basic public data
       } finally {
         setLoading(false);
@@ -245,6 +244,7 @@ export default function GitHubStats() {
                 className="cyber-bracket overflow-hidden"
                 style={{ background: "rgba(4,6,14,0.85)", border: "1px solid rgba(0,245,255,0.15)" }}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={streakUrl}
                   alt="GitHub Contribution Streak"

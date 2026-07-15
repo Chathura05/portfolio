@@ -92,7 +92,6 @@ function SkillBar({ skill, index }: { skill: Skill; index: number }) {
 
 function SkillTag({ skill }: { skill: Skill }) {
   const Icon = iconMap[skill.icon];
-  const cat  = categoryColors[skill.category];
   return (
     <motion.div
       variants={fadeUp}
