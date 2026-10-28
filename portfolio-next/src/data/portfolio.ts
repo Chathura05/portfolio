@@ -99,6 +99,13 @@ export const timeline: TimelineItem[] = [
     type:        "education",
   },
   {
+    title:       "Software Engineering Intern",
+    org:         "Sola Chemical Company (Pvt.) Ltd.",
+    period:      "Apr 2026 – Oct 2026 · 6 months",
+    description: "Worked on developing REST APIs using Laravel, built internal tools, and collaborated in an Agile team to deliver production-ready software features.",
+    type:        "work",
+  },
+  {
     title:       "Web Development Projects",
     org:         "Freelance",
     period:      "2023 – Present",
