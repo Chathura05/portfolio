@@ -3,14 +3,14 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import {
-  FaBuilding, FaHospital, FaBreadSlice, FaCashRegister,
+  FaBuilding, FaHospital, FaBreadSlice, FaCashRegister, FaFilm, FaMap,
 } from "react-icons/fa";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { projects, type Project } from "@/data/portfolio";
 import { staggerContainer, scaleIn } from "@/components/ui/SectionWrapper";
 
 const iconMap: Record<string, React.ElementType> = {
-  FaBuilding, FaHospital, FaBreadSlice, FaCashRegister,
+  FaBuilding, FaHospital, FaBreadSlice, FaCashRegister, FaFilm, FaMap,
 };
 
 type FilterKey = "all" | Project["category"];
@@ -27,6 +27,8 @@ const gradientMap: Record<string, { from: string; to: string; glow: string }> = 
   "from-emerald-500 to-teal-600":     { from: "#00ff88", to: "#00c8e0", glow: "rgba(0,255,136,0.3)" },
   "from-amber-500 to-orange-600":     { from: "#ff8800", to: "#ff003c", glow: "rgba(255,136,0,0.3)" },
   "from-violet-500 to-purple-700":    { from: "#bf00ff", to: "#7700cc", glow: "rgba(191,0,255,0.3)" },
+  "from-sky-500 to-indigo-600":       { from: "#0ea5e9", to: "#4f46e5", glow: "rgba(14,165,233,0.3)" },
+  "from-teal-500 to-cyan-600":        { from: "#14b8a6", to: "#0891b2", glow: "rgba(20,184,166,0.3)" },
 };
 
 function ProjectCard({ project }: { project: Project }) {
